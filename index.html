@@ -221,15 +221,21 @@
 
   }
 
-  function escolher(item){
+  var atualiza = function(){
 
     $.get("https://markkocarol.github.io/dados.json", function(data, status){
-      console.log("Data: " + data + "\nStatus: " + status);
+      data.lista.forEach(a => {
+        $("div[data-numImg='"+a.Num+"']").removeClass('disponivel').addClass('indisponivel');
+      })
     });
 
+  }();
+
+  function escolher(item){
     $(item).find('span[name="done"]').text("Indisponivel");
     $(item).removeAttr('onclick');
     $(item).removeClass('disponivel').addClass('indisponivel');
+    atualiza();
   }
 
   </script>

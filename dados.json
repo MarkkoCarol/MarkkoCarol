@@ -1,6 +1,6 @@
 {
     "lista": [
-        {"1": "Luan"},
-        {"2": "Dudu"}
+        {"Num": 1, "Nom": "Luan"},
+        {"Num": 2, "Nom": "Dudu"}
     ]
 }
