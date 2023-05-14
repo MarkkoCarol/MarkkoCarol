@@ -222,6 +222,11 @@
   }
 
   function escolher(item){
+
+    $.get("https://markkocarol.github.io/dados.json", function(data, status){
+      console.log("Data: " + data + "\nStatus: " + status);
+    });
+
     $(item).find('span[name="done"]').text("Indisponivel");
     $(item).removeAttr('onclick');
     $(item).removeClass('disponivel').addClass('indisponivel');
