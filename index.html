@@ -225,17 +225,16 @@
 
     $.get("https://markkocarol.github.io/dados.json", function(data, status){
       data.lista.forEach(a => {
-        $("div[data-numImg='"+a.Num+"']").removeClass('disponivel').addClass('indisponivel');
+        escolher($("div[data-numImg='"+a.Num+"']"));
       })
     });
-
+    
   }();
 
   function escolher(item){
     $(item).find('span[name="done"]').text("Indisponivel");
     $(item).removeAttr('onclick');
     $(item).removeClass('disponivel').addClass('indisponivel');
-    atualiza();
   }
 
   </script>
